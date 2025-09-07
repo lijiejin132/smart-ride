@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <title>示例 H5 页面</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial; margin:0; padding:0; color:#222; }
+        header { padding:18px; text-align:center; background:#0a84ff; color:#fff; font-size:18px; }
+        main { padding:16px; }
+        .card { background:#fff; border-radius:10px; padding:12px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); margin-bottom:12px; }
+        .btn { display:inline-block; padding:10px 16px; border-radius:8px; background:#0a84ff; color:#fff; text-decoration:none; }
+        footer { text-align:center; padding:16px; color:#888; font-size:12px; }
+        @media (min-width:420px) {
+            main { max-width:420px; margin:0 auto; }
+        }
+    </style>
+</head>
+<body>
+<header>我的 H5 演示页面</header>
+<main>
+    <div class="card">
+        <h3>欢迎</h3>
+        <p>这是一个简单的示例页面，适配移动端与微信内置浏览器。</p>
+        <p><a class="btn" href="#action">点击体验</a></p>
+    </div>
+
+    <div class="card">
+        <h4>说明</h4>
+        <ul>
+            <li>请确保页面使用 HTTPS</li>
+            <li>若需要微信分享/获取用户信息，需要接入微信 JS-SDK（需公众号配置）</li>
+        </ul>
+    </div>
+</main>
+<footer>© 你的公司或团队</footer>
+
+<script>
+    // 可放一些微信内置浏览器兼容处理
+    (function(){
+        if (/MicroMessenger/i.test(navigator.userAgent)) {
+            console.log('在微信内置浏览器打开');
+        }
+    })();
+</script>
+</body>
+</html>
